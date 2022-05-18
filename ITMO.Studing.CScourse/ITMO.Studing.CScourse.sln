@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32428.217
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CScourse.Lab2.Ex1.BankAccount", "ITMO.Studing.CScourse.Lab02.Ex1.BankAccount\ITMO.Studing.CScourse.Lab2.Ex1.BankAccount.csproj", "{6993FD9C-28A6-4157-B76E-494FCD521D3D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CScourse.Lab2.Ex1.BankAccount", "ITMO.Studing.CScourse.Lab2.Ex1.BankAccount\ITMO.Studing.CScourse.Lab2.Ex1.BankAccount.csproj", "{6993FD9C-28A6-4157-B76E-494FCD521D3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CScourse.Lab2.Ex2.StructType", "ITMO.Studing.CScourse.Lab02.Ex2.StructType\ITMO.Studing.CScourse.Lab2.Ex2.StructType.csproj", "{FF3672B5-41BD-4FFF-B36C-F250AE430B32}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CScourse.Lab2.Ex2.StructType", "ITMO.Studing.CScourse.Lab2.Ex2.StructType\ITMO.Studing.CScourse.Lab2.Ex2.StructType.csproj", "{FF3672B5-41BD-4FFF-B36C-F250AE430B32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CScourse.Lab2.Ex3.StructType", "ITMO.Studing.CScourse.Lab02.Ex3.StructType\ITMO.Studing.CScourse.Lab2.Ex3.StructType.csproj", "{DA2CD77A-05A2-4C24-8BB2-DCF9E7CCA272}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CScourse.Lab2.Ex3.StructType", "ITMO.Studing.CScourse.Lab2.Ex3.StructType\ITMO.Studing.CScourse.Lab2.Ex3.StructType.csproj", "{DA2CD77A-05A2-4C24-8BB2-DCF9E7CCA272}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CScourse.Lab1.Ex1_2_3.CreatingSimpleProgramm", "ITMO.Studing.CScourse.Lab1.Ex1_2_3.CreatingSimpleProgramm\ITMO.Studing.CScourse.Lab1.Ex1_2_3.CreatingSimpleProgramm.csproj", "{F1BA7BA6-096E-48C3-9F18-F350FD153BD6}"
 EndProject
