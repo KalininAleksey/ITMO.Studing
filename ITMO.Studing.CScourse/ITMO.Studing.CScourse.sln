@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32428.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CScourse.Lab2.Ex1.BankAccount", "ITMO.Studing.CScourse.Lab02.Ex1.BankAccount\ITMO.Studing.CScourse.Lab2.Ex1.BankAccount.csproj", "{6993FD9C-28A6-4157-B76E-494FCD521D3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CScourse.Lab2.Ex2.StructType", "ITMO.Studing.CScourse.Lab02.Ex2.StructType\ITMO.Studing.CScourse.Lab2.Ex2.StructType.csproj", "{FF3672B5-41BD-4FFF-B36C-F250AE430B32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CScourse.Lab2.Ex3.StructType", "ITMO.Studing.CScourse.Lab02.Ex3.StructType\ITMO.Studing.CScourse.Lab2.Ex3.StructType.csproj", "{DA2CD77A-05A2-4C24-8BB2-DCF9E7CCA272}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CScourse.Lab1.Ex1_2_3.CreatingSimpleProgramm", "ITMO.Studing.CScourse.Lab1.Ex1_2_3.CreatingSimpleProgramm\ITMO.Studing.CScourse.Lab1.Ex1_2_3.CreatingSimpleProgramm.csproj", "{F1BA7BA6-096E-48C3-9F18-F350FD153BD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CScourse.Lab1.Ex4.Divider", "ITMO.Studing.CScourse.Lab1.Ex4.Divider\ITMO.Studing.CScourse.Lab1.Ex4.Divider.csproj", "{1E9DC868-A115-4720-A277-40FE256C7E8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6993FD9C-28A6-4157-B76E-494FCD521D3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6993FD9C-28A6-4157-B76E-494FCD521D3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6993FD9C-28A6-4157-B76E-494FCD521D3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6993FD9C-28A6-4157-B76E-494FCD521D3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF3672B5-41BD-4FFF-B36C-F250AE430B32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF3672B5-41BD-4FFF-B36C-F250AE430B32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF3672B5-41BD-4FFF-B36C-F250AE430B32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF3672B5-41BD-4FFF-B36C-F250AE430B32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA2CD77A-05A2-4C24-8BB2-DCF9E7CCA272}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA2CD77A-05A2-4C24-8BB2-DCF9E7CCA272}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA2CD77A-05A2-4C24-8BB2-DCF9E7CCA272}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA2CD77A-05A2-4C24-8BB2-DCF9E7CCA272}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1BA7BA6-096E-48C3-9F18-F350FD153BD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1BA7BA6-096E-48C3-9F18-F350FD153BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1BA7BA6-096E-48C3-9F18-F350FD153BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1BA7BA6-096E-48C3-9F18-F350FD153BD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E9DC868-A115-4720-A277-40FE256C7E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E9DC868-A115-4720-A277-40FE256C7E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E9DC868-A115-4720-A277-40FE256C7E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E9DC868-A115-4720-A277-40FE256C7E8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6B84BB8-060E-48E0-A37F-B3AA8171C525}
+	EndGlobalSection
+EndGlobal
