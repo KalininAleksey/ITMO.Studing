@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ITMO.Studing.CScourse.Lab4.Ex1.Utils
+namespace ITMO.Studing.CScourse.Lab4.Ex1_2.Utils
 {
     public class Test
     {
@@ -23,6 +23,11 @@ namespace ITMO.Studing.CScourse.Lab4.Ex1.Utils
             // Test the Greater( ) method
             greater = Utils.Greater(x, y);
             Console.WriteLine("The greater value is " + greater);
+            // Test the Swap method
+            Console.WriteLine("Before swap: " + x + "," + y);
+            Utils.Swap(ref x, ref y);
+            Console.WriteLine("After swap: " + x + "," + y);
+
         }
     }
 

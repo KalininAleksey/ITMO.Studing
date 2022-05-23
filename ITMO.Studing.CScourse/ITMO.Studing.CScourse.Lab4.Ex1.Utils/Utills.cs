@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ITMO.Studing.CScourse.Lab4.Ex1.Utils
+namespace ITMO.Studing.CScourse.Lab4.Ex1_2.Utils
 {
     class Utils
     {
@@ -19,6 +19,13 @@ namespace ITMO.Studing.CScourse.Lab4.Ex1.Utils
             else
                 return b;
         }
+        public static void Swap(ref int a, ref int b)
+        {
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+
     }
 
 }
