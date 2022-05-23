@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CScourse.Lab3.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CScourse.Lab3.Ex3.WhatDay3", "ITMO.Studing.CScourse.Lab3.Ex3.WhatDay3\ITMO.Studing.CScourse.Lab3.Ex3.WhatDay3.csproj", "{90F7C8A4-810F-4DD2-8056-87E753E02D41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CScourse.Lab4.Ex1._2.Utils", "ITMO.Studing.CScourse.Lab4.Ex1.Utils\ITMO.Studing.CScourse.Lab4.Ex1._2.Utils.csproj", "{776038EB-D8FF-4451-AC46-D1D99DD9DA56}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CScourse.Lab4.Ex1_2.Utils", "ITMO.Studing.CScourse.Lab4.Ex1.Utils\ITMO.Studing.CScourse.Lab4.Ex1_2.Utils.csproj", "{776038EB-D8FF-4451-AC46-D1D99DD9DA56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
