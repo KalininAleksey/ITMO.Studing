@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CScourse.Lab3.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CScourse.Lab4.Ex1_2.Utils", "ITMO.Studing.CScourse.Lab4.Ex1.Utils\ITMO.Studing.CScourse.Lab4.Ex1_2.Utils.csproj", "{776038EB-D8FF-4451-AC46-D1D99DD9DA56}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CScourse.Lab5.Ex1.FileDetails", "ITMO.Studing.CScourse.Lab5.FileDetails\ITMO.Studing.CScourse.Lab5.Ex1.FileDetails.csproj", "{D960E64E-79C5-4F7E-B6C4-FC876ED3E393}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{776038EB-D8FF-4451-AC46-D1D99DD9DA56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{776038EB-D8FF-4451-AC46-D1D99DD9DA56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{776038EB-D8FF-4451-AC46-D1D99DD9DA56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D960E64E-79C5-4F7E-B6C4-FC876ED3E393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D960E64E-79C5-4F7E-B6C4-FC876ED3E393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D960E64E-79C5-4F7E-B6C4-FC876ED3E393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D960E64E-79C5-4F7E-B6C4-FC876ED3E393}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
