@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32428.217
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CSDesktopAppDev.Lab1Ex1", "ITMO.Studing.CSDesktopAppDev.Lab2Ex1\ITMO.Studing.CSDesktopAppDev.Lab1Ex1.csproj", "{D467D070-9DE9-4FBB-8958-60CACEDC305B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CSDesktopAppDev.Lab1Ex1", "ITMO.Studing.CSDesktopAppDev.Lab1Ex1\ITMO.Studing.CSDesktopAppDev.Lab1Ex1.csproj", "{D467D070-9DE9-4FBB-8958-60CACEDC305B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CSDesktopAppDev.Lab1Ex2_3", "ITMO.Studing.CSDesktopAppDev.Lab1Ex2_3\ITMO.Studing.CSDesktopAppDev.Lab1Ex2_3.csproj", "{F8DC73F7-9C35-44CF-9BCE-0A578A640EFB}"
 EndProject
@@ -16,6 +16,28 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CSDesktopAppDev.Lab1Ex5Task2", "ITMO.Studing.CSDesktopAppDev.Lab1Ex5Task2\ITMO.Studing.CSDesktopAppDev.Lab1Ex5Task2.csproj", "{3225B651-A111-475E-8361-DD4961DCFD13}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CSDesktopAppDev.Lab2Ex2.TestList", "ITMO.Studing.CSDesktopAppDev.Lab2Ex2.TestList\ITMO.Studing.CSDesktopAppDev.Lab2Ex2.TestList.csproj", "{7031A676-B04F-4D06-B9B9-1654BDF899E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CSDesktopAppDev.Lab2Ex3.MdiApplication", "ITMO.Studing.CSDesktopAppDev.Lab2Ex3.MdiApplication\ITMO.Studing.CSDesktopAppDev.Lab2Ex3.MdiApplication.csproj", "{920585B2-7ADA-48BF-B9FC-8F8959E47356}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CSDesktopAppDev.Lab2Ex4.MdiApplication", "ITMO.Studing.CSDesktopAppDev.Lab2Ex4.MdiApplication\ITMO.Studing.CSDesktopAppDev.Lab2Ex4.MdiApplication.csproj", "{54969688-E8EC-44E1-B88C-3EE12D23E223}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CSDesktopAppDev.Lab2Ex5.WinContainer", "ITMO.Studing.CSDesktopAppDev.Lab2Ex5.WinContainer\ITMO.Studing.CSDesktopAppDev.Lab2Ex5.WinContainer.csproj", "{FD2EFA16-06D3-464E-B8E6-55AF22963B5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CSDesktopAppDev.Lab2Ex6.BiblWorm", "ITMO.Studing.CSDesktopAppDev.Lab2Ex6.BiblWorm\ITMO.Studing.CSDesktopAppDev.Lab2Ex6.BiblWorm.csproj", "{A65A1F2C-C39A-4F77-9EEB-495CE2FBF833}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CSDesktopAppDev.Lab5Ex3.WinAnim", "ITMO.Studing.CSDesktopAppDev.Lab5Ex3.WinAnim\ITMO.Studing.CSDesktopAppDev.Lab5Ex3.WinAnim.csproj", "{39D1811C-D14C-443E-B848-5FE9ED9E6F80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CSDesktopAppDev.Lab5Ex1.Exel", "ITMO.Studing.CSDesktopAppDev.Lab5Ex1.Exel\ITMO.Studing.CSDesktopAppDev.Lab5Ex1.Exel.csproj", "{EAC901A2-8CDE-4E3F-861C-E320A85B4DA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CSDesktopAppDev.Lab7Ex1.WinBackgroundWorker", "ITMO.Studing.CSDesktopAppDev.Lab7Ex1.WinBackgroundWorker\ITMO.Studing.CSDesktopAppDev.Lab7Ex1.WinBackgroundWorker.csproj", "{58D3CDB4-35E4-4EFF-80F8-ED3CB5D65BC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CSDesktopAppDev.Lab2Ex7_8.RegistrationForm", "ITMO.Studing.CSDesktopAppDev.Lab2Ex7_8.RegistrationForm\ITMO.Studing.CSDesktopAppDev.Lab2Ex7_8.RegistrationForm.csproj", "{715137B2-71E2-4D59-88D1-D89D0F0CFC24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CSDesktopAppDev.Lab3Ex1.WinTimer1", "ITMO.Studing.CSDesktopAppDev.Lab3Ex1.WinTimer1\ITMO.Studing.CSDesktopAppDev.Lab3Ex1.WinTimer1.csproj", "{BE219401-5A0B-4053-9231-7D7A73B9AB50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CSDesktopAppDev.Lab3Ex1.ControlLibrary", "ITMO.Studing.CSDesktopAppDev.Lab3Ex1.ControlLibrary\ITMO.Studing.CSDesktopAppDev.Lab3Ex1.ControlLibrary.csproj", "{AAAB08C0-3DCC-4EC4-BE9A-346800C98CB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CSDesktopAppDev.Lab3Ex2.WinTimer2", "ITMO.Studing.CSDesktopAppDev.Lab3Ex2.WinTimer2\ITMO.Studing.CSDesktopAppDev.Lab3Ex2.WinTimer2.csproj", "{70DBD3A8-23DE-4C36-AAC9-FF2B9923F16A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +73,50 @@ Global
 		{7031A676-B04F-4D06-B9B9-1654BDF899E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7031A676-B04F-4D06-B9B9-1654BDF899E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7031A676-B04F-4D06-B9B9-1654BDF899E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{920585B2-7ADA-48BF-B9FC-8F8959E47356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{920585B2-7ADA-48BF-B9FC-8F8959E47356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{920585B2-7ADA-48BF-B9FC-8F8959E47356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{920585B2-7ADA-48BF-B9FC-8F8959E47356}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54969688-E8EC-44E1-B88C-3EE12D23E223}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54969688-E8EC-44E1-B88C-3EE12D23E223}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54969688-E8EC-44E1-B88C-3EE12D23E223}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54969688-E8EC-44E1-B88C-3EE12D23E223}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD2EFA16-06D3-464E-B8E6-55AF22963B5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD2EFA16-06D3-464E-B8E6-55AF22963B5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD2EFA16-06D3-464E-B8E6-55AF22963B5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD2EFA16-06D3-464E-B8E6-55AF22963B5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A65A1F2C-C39A-4F77-9EEB-495CE2FBF833}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A65A1F2C-C39A-4F77-9EEB-495CE2FBF833}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A65A1F2C-C39A-4F77-9EEB-495CE2FBF833}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A65A1F2C-C39A-4F77-9EEB-495CE2FBF833}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39D1811C-D14C-443E-B848-5FE9ED9E6F80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39D1811C-D14C-443E-B848-5FE9ED9E6F80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39D1811C-D14C-443E-B848-5FE9ED9E6F80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39D1811C-D14C-443E-B848-5FE9ED9E6F80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAC901A2-8CDE-4E3F-861C-E320A85B4DA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAC901A2-8CDE-4E3F-861C-E320A85B4DA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAC901A2-8CDE-4E3F-861C-E320A85B4DA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAC901A2-8CDE-4E3F-861C-E320A85B4DA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58D3CDB4-35E4-4EFF-80F8-ED3CB5D65BC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58D3CDB4-35E4-4EFF-80F8-ED3CB5D65BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58D3CDB4-35E4-4EFF-80F8-ED3CB5D65BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58D3CDB4-35E4-4EFF-80F8-ED3CB5D65BC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{715137B2-71E2-4D59-88D1-D89D0F0CFC24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{715137B2-71E2-4D59-88D1-D89D0F0CFC24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{715137B2-71E2-4D59-88D1-D89D0F0CFC24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{715137B2-71E2-4D59-88D1-D89D0F0CFC24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE219401-5A0B-4053-9231-7D7A73B9AB50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE219401-5A0B-4053-9231-7D7A73B9AB50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE219401-5A0B-4053-9231-7D7A73B9AB50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE219401-5A0B-4053-9231-7D7A73B9AB50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAAB08C0-3DCC-4EC4-BE9A-346800C98CB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAAB08C0-3DCC-4EC4-BE9A-346800C98CB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAAB08C0-3DCC-4EC4-BE9A-346800C98CB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAAB08C0-3DCC-4EC4-BE9A-346800C98CB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70DBD3A8-23DE-4C36-AAC9-FF2B9923F16A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70DBD3A8-23DE-4C36-AAC9-FF2B9923F16A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70DBD3A8-23DE-4C36-AAC9-FF2B9923F16A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70DBD3A8-23DE-4C36-AAC9-FF2B9923F16A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

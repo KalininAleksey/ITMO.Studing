@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ITMO.Studing.CSDesktopAppDev.Lab2.WinQestion
+namespace ITMO.Studing.CSDesktopAppDev.Lab5Ex3.WinAnim
 {
     static class Program
     {
