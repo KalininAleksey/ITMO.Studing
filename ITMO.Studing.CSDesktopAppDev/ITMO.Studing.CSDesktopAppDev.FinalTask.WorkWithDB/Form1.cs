@@ -8,6 +8,7 @@ using System.Linq;
 using System.Security.Principal;
 using System.Text;
 using System.Windows.Forms;
+using System.Globalization;
 
 
 namespace ITMO.Studing.CSDesktopAppDev.FinalTask.WorkWithDB
@@ -15,7 +16,7 @@ namespace ITMO.Studing.CSDesktopAppDev.FinalTask.WorkWithDB
     public partial class Form1 : Form
     {
         SqlConnection conn;
-        bool tableisselected;
+        DataTable dt = new DataTable();
         private bool logincheck(string login)
         {
             using (WindowsIdentity user = WindowsIdentity.GetCurrent())
@@ -35,44 +36,26 @@ namespace ITMO.Studing.CSDesktopAppDev.FinalTask.WorkWithDB
 
             if (logincheck(textBox3.Text.ToString()) == true)
             {
-                StringBuilder errorMessages = new StringBuilder();
-                string dbname = textBox2.Text.ToString();
-                string servername = textBox1.Text.ToString();
-                string connstring = "Integrated Security = SSPI; Persist Security Info = False; Initial Catalog = " + dbname + "; Data Source = " + servername;
-                using (conn = new SqlConnection(@connstring))
-                {
-                    try
+                string connstring = "Integrated Security = SSPI; Persist Security Info = False; Initial Catalog = test_block1; Data Source = " + textBox1.Text.ToString();
+                conn = new SqlConnection(@connstring);
+                try
                     {
                         conn.Open();
                         MessageBox.Show("DB is connected");
                         button1.Enabled = false;
-                        button2.Enabled = true;
-                        using (SqlCommand cmd = new SqlCommand("SELECT * FROM INFORMATION_SCHEMA.SCHEMATA", conn))
-                        {
-                            comboBox1.Visible = true;
-                            label4.Visible = true;
-                            using (SqlDataReader read = cmd.ExecuteReader())
-                                {
-                                while (read.Read())
-                                    { 
-                                    comboBox1.Items.Add(read["SCHEMA_NAME"].ToString());
-                                    }
-                                }
-
-                        }
-                                                   
-
+                        button2.Enabled = true;                                                   
                     }
                     catch (SqlException ex)
                     {
+                        StringBuilder errorMessages = new StringBuilder();
                         for (int i = 0; i < ex.Errors.Count; i++)
                         {
                             errorMessages.Append("Index #" + i + "\n" + "Message: " + ex.Errors[i].Message + "\n" + "LineNumber: " + ex.Errors[i].LineNumber + "\n" + "Source: " + ex.Errors[i].Source + "\n" + "Procedure: " + ex.Errors[i].Procedure + "\n");
                         }
                         MessageBox.Show(errorMessages.ToString());
                     }
+                    
                 }
-            }
             else
                 MessageBox.Show("Login is incorrect");
 
@@ -80,86 +63,33 @@ namespace ITMO.Studing.CSDesktopAppDev.FinalTask.WorkWithDB
 
         private void button2_Click(object sender, EventArgs e)
         {
-            conn.Close();
-            conn.Dispose();
+            if (conn != null)
+            {
+                conn.Close();
+                conn.Dispose();
+            }
             button2.Enabled = false;
             button1.Enabled = true;
-            comboBox1.Visible = false;
-            comboBox1.Items.Clear();
-            comboBox2.Items.Clear();
-            label4.Visible = false;
-            comboBox2.Visible = false;
-            label8.Visible = false;
-            tableisselected = false;
-        }
-
-        private void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            StringBuilder errorMessages = new StringBuilder();
-            string dbname = textBox2.Text.ToString();
-            string servername = textBox1.Text.ToString();
-            string connstring = "Integrated Security = SSPI; Persist Security Info = False; Initial Catalog = " + dbname + "; Data Source = " + servername;
-            using (conn = new SqlConnection(@connstring))
-            {
-                try
-                {
-                    conn.Open();
-                    string tableowner=comboBox1.SelectedItem.ToString();
-                    string cmdtext = "EXEC sp_tables @table_name = '%', @table_owner = '" + tableowner + "', @table_qualifier = '" +dbname+"'; ";
-                    using (SqlCommand cmd = new SqlCommand(cmdtext, conn))
-                    {
-                        comboBox2.Visible = true;
-                        label8.Visible = true;
-                        using (SqlDataReader read = cmd.ExecuteReader())
-                        {
-                            while (read.Read())
-                            {
-                                comboBox2.Items.Add(read["TABLE_NAME"].ToString());
-                            }
-                        }
-                    }
-                }
-                catch (SqlException ex)
-                {
-                    for (int i = 0; i < ex.Errors.Count; i++)
-                    {
-                        errorMessages.Append("Index #" + i + "\n" + "Message: " + ex.Errors[i].Message + "\n" + "LineNumber: " + ex.Errors[i].LineNumber + "\n" + "Source: " + ex.Errors[i].Source + "\n" + "Procedure: " + ex.Errors[i].Procedure + "\n");
-                    }
-                    MessageBox.Show(errorMessages.ToString());
-                }
-            }
         }
 
         private void tabControl1_Selecting(object sender, TabControlCancelEventArgs e)
         {
-            if (e.TabPage != tabPage1)
+            if (e.TabPage != tabPage1 && conn is null)
             {
-                if (!tableisselected)
-                    e.Cancel = true;
+                         e.Cancel = true;
             }
         }
 
-        private void comboBox2_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            tableisselected = true;
-        }
 
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
         {
-            if (e.TabPage != tabPage1)
+            if (e.TabPage == tabPage2 || e.TabPage == tabPage4 || e.TabPage == tabPage5)
             {
-                StringBuilder errorMessages = new StringBuilder();
-                DataTable dt = new DataTable();
-                string dbname = textBox2.Text.ToString();
-                string servername = textBox1.Text.ToString();
-                string connstring = "Integrated Security = SSPI; Persist Security Info = False; Initial Catalog = " + dbname + "; Data Source = " + servername;
-                using (conn = new SqlConnection(@connstring))
-                {
+                dt.Clear();
+                dt.Columns.Clear();                             
                     try
-                    {
-                        conn.Open();
-                        string tableowner = comboBox2.SelectedItem.ToString();
-                        string cmdtext = "SELECT * FROM " + comboBox1.SelectedItem.ToString() + "." + comboBox2.SelectedItem.ToString() + ";";
+                    {                    
+                        string cmdtext = "SELECT * FROM t1;";
                         using (SqlCommand cmd = new SqlCommand(cmdtext, conn))
                         {
                             using (SqlDataReader read = cmd.ExecuteReader())
@@ -169,7 +99,7 @@ namespace ITMO.Studing.CSDesktopAppDev.FinalTask.WorkWithDB
                                     dt.Columns.Add(new DataColumn(read.GetName(Cnum)));
                                 }
                                 dt.AcceptChanges();
-                                int Rnum = 1;
+                                int Rnum = 1;   
                                 while (read.Read())
                                 {
                                     DataRow dr = dt.NewRow();
@@ -184,24 +114,25 @@ namespace ITMO.Studing.CSDesktopAppDev.FinalTask.WorkWithDB
                                     dt.Rows.Add(dr);
                                     dt.AcceptChanges();
                                 }
-                                dataGridView1.DataSource = dt;
+                                if (e.TabPage == tabPage2) dataGridView1.DataSource = dt;
+                                if (e.TabPage == tabPage5)
+                                {
                                 dataGridView2.DataSource = dt;
-                                dataGridView3.DataSource = dt;
-                                dataGridView4.DataSource = dt.Columns;
-
-
+                                MessageBox.Show("Make double click on rowheader to delete row");
                             }
+                        }
                         }
                     }
                     catch (SqlException ex)
                     {
+                        StringBuilder errorMessages = new StringBuilder();
                         for (int i = 0; i < ex.Errors.Count; i++)
                         {
                             errorMessages.Append("Index #" + i + "\n" + "Message: " + ex.Errors[i].Message + "\n" + "LineNumber: " + ex.Errors[i].LineNumber + "\n" + "Source: " + ex.Errors[i].Source + "\n" + "Procedure: " + ex.Errors[i].Procedure + "\n");
                         }
                         MessageBox.Show(errorMessages.ToString());
                     }
-                }
+                
             }
    
                         
@@ -217,62 +148,201 @@ namespace ITMO.Studing.CSDesktopAppDev.FinalTask.WorkWithDB
 
         }
 
-        private void dataGridView3_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
-                StringBuilder errorMessages = new StringBuilder();
-                DataTable dt = new DataTable();
-                string dbname = textBox2.Text.ToString();
-                string servername = textBox1.Text.ToString();
-                string connstring = "Integrated Security = SSPI; Persist Security Info = False; Initial Catalog = " + dbname + "; Data Source = " + servername;
-                using (conn = new SqlConnection(@connstring))
+            if (conn!= null)
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(textBox2.Text) && !string.IsNullOrWhiteSpace(textBox4.Text) && !string.IsNullOrWhiteSpace(textBox5.Text) && !string.IsNullOrWhiteSpace(textBox2.Text))
+            {                
+                try
                 {
-                    try
+                    string cmdtext = "INSERT INTO T1 (Name, Number, Price, Discount) VALUES(@Name, @Number, @Price, @Discount)";
+                    using (SqlCommand cmd = new SqlCommand(cmdtext, conn))
                     {
-                        conn.Open();
-                        string tableowner = comboBox2.SelectedItem.ToString();
-                        string cmdtext = "SELECT * FROM " + comboBox1.SelectedItem.ToString() + "." + comboBox2.SelectedItem.ToString() + ";";
-                        using (SqlCommand cmd = new SqlCommand(cmdtext, conn))
-                        {
-                            using (SqlDataReader read = cmd.ExecuteReader())
-                            {
-                                for (int Cnum = 0; Cnum < read.FieldCount; Cnum++)
-                                {
-                                    dt.Columns.Add(new DataColumn(read.GetName(Cnum)));
-                                }
-                                dt.AcceptChanges();
-                                int Rnum = 1;
-                                while (read.Read())
-                                {
-                                    DataRow dr = dt.NewRow();
-                                    for (int Cnum = 0; Cnum < read.FieldCount; Cnum++)
-                                    {
-                                        if (read[read.GetName(Cnum)] != null)
-                                        {
-                                            dr[Cnum] = read[read.GetName(Cnum)];
-                                        }
-                                    }
-                                    Rnum++;
-                                    dt.Rows.Add(dr);
-                                    dt.AcceptChanges();
-                                }
-                                dataGridView1.DataSource = dt;
-                                dataGridView2.DataSource = dt;
-                                dataGridView3.DataSource = dt;
-                                dataGridView4.DataSource = dt.Columns;
-
-
-                            }
-                        }
-                    }
-                    catch (SqlException ex)
-                    {
-                        for (int i = 0; i < ex.Errors.Count; i++)
-                        {
-                            errorMessages.Append("Index #" + i + "\n" + "Message: " + ex.Errors[i].Message + "\n" + "LineNumber: " + ex.Errors[i].LineNumber + "\n" + "Source: " + ex.Errors[i].Source + "\n" + "Procedure: " + ex.Errors[i].Procedure + "\n");
-                        }
-                        MessageBox.Show(errorMessages.ToString());
+                        cmd.Parameters.AddWithValue("Name", textBox2.Text);
+                        cmd.Parameters.AddWithValue("Number", textBox4.Text);
+                        cmd.Parameters.AddWithValue("Price", textBox5.Text);
+                        cmd.Parameters.AddWithValue("Discount", textBox6.Text);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Table is inserted");
+                        textBox2.Text = textBox4.Text = textBox5.Text = textBox6.Text = null;
                     }
                 }
+                catch (SqlException ex)
+                {
+                    StringBuilder errorMessages = new StringBuilder();
+                    for (int i = 0; i < ex.Errors.Count; i++)
+                    {
+                        errorMessages.Append("Index #" + i + "\n" + "Message: " + ex.Errors[i].Message + "\n" + "LineNumber: " + ex.Errors[i].LineNumber + "\n" + "Source: " + ex.Errors[i].Source + "\n" + "Procedure: " + ex.Errors[i].Procedure + "\n");
+                    }
+                    MessageBox.Show(errorMessages.ToString());
+                }
             }
+            else MessageBox.Show("All Fields must be filled in");
+        }
+
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar.Equals(',') || e.KeyChar == 8))
+            {
+                e.Handled = true;
+                MessageBox.Show("Field must contains numbers and ','");
+            }
+        }
+
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar.Equals('.') || e.KeyChar==8))
+            {
+                e.Handled = true;
+                MessageBox.Show("Field must contains numbers and '.'");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(textBox7.Text) && !string.IsNullOrWhiteSpace(textBox8.Text) && !string.IsNullOrWhiteSpace(textBox9.Text) && !string.IsNullOrWhiteSpace(textBox10.Text) && !string.IsNullOrWhiteSpace(textBox11.Text))
+            {
+                try
+                {
+                    string cmdtext = "UPDATE T1 SET [Name]=@Name, [Number]=@Number, [Price]=@Price, [Discount]=@Discount WHERE [ID]=@ID";
+                    using (SqlCommand cmd = new SqlCommand(cmdtext, conn))
+                    {
+                        cmd.Parameters.AddWithValue("ID", textBox11.Text);
+                        cmd.Parameters.AddWithValue("Name", textBox10.Text);
+                        cmd.Parameters.AddWithValue("Number", textBox9.Text);
+                        cmd.Parameters.AddWithValue("Price", textBox8.Text);
+                        cmd.Parameters.AddWithValue("Discount", textBox7.Text);
+                        MessageBox.Show(cmdtext);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Table is updateded");
+                        textBox7.Text = textBox8.Text = textBox9.Text = textBox10.Text = textBox11.Text = null;
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    StringBuilder errorMessages = new StringBuilder();
+                    for (int i = 0; i < ex.Errors.Count; i++)
+                    {
+                        errorMessages.Append("Index #" + i + "\n" + "Message: " + ex.Errors[i].Message + "\n" + "LineNumber: " + ex.Errors[i].LineNumber + "\n" + "Source: " + ex.Errors[i].Source + "\n" + "Procedure: " + ex.Errors[i].Procedure + "\n");
+                    }
+                    MessageBox.Show(errorMessages.ToString());
+                }
+            }
+            else MessageBox.Show("All Fields must be filled in");
+        }
+
+        private void textBox9_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == 8 || e.KeyChar == 9 || e.KeyChar == 13))
+            {
+                e.Handled = true;
+                MessageBox.Show("Field must contains numbers");
+            }
+
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == 8 || e.KeyChar == 9 || e.KeyChar == 13))
+            {
+                e.Handled = true;
+                MessageBox.Show("Field must contains numbers");
+            }
+        }
+
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar.Equals(',') || e.KeyChar == 8 || e.KeyChar == 9 || e.KeyChar == 13))
+            {
+                e.Handled = true;
+                MessageBox.Show("Field must contains numbers and ','");
+            }
+        }
+
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar.Equals('.') || e.KeyChar == 8 || e.KeyChar == 9 || e.KeyChar == 13))
+            {
+                e.Handled = true;
+                MessageBox.Show("Field must contains numbers and ','");
+            }
+        }
+
+
+        private void textBox11_Validating(object sender, CancelEventArgs e)
+        {
+            if (int.Parse(textBox11.Text) <= dt.Rows.Count && int.Parse(textBox11.Text)!=0)
+            {
+                e.Cancel = false;
+                int selID = int.Parse(textBox11.Text) - 1;
+                textBox10.Text = @dt.Rows[selID]["Name"].ToString();
+                textBox9.Text = @dt.Rows[selID]["Number"].ToString();
+                textBox8.Text = @dt.Rows[selID]["Price"].ToString();
+                textBox7.Text = @dt.Rows[selID]["Discount"].ToString();
+                textBox7.Text = textBox7.Text.Replace(',', '.');
+            }
+            else
+            {
+                e.Cancel = true;
+                MessageBox.Show("ID is out of range");
+                textBox11.Text = null;
+            }
+        }
+
+        private void textBox11_Validated(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox11_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == 8 || e.KeyChar == 9 || e.KeyChar == 13))
+            {
+                e.Handled = true;
+                MessageBox.Show("Field must contains numbers");
+            }
+        }
+
+        private void dataGridView2_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                string cmdtext = "DELETE FROM T1 WHERE [ID]=@ID";
+                using (SqlCommand cmd = new SqlCommand(cmdtext, conn))
+                {
+                    cmd.Parameters.AddWithValue("ID", @dt.Rows[e.RowIndex]["ID"].ToString());
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Row with ID="+ @dt.Rows[e.RowIndex]["ID"].ToString() + " is deleted");
+                }
+            }
+            catch (SqlException ex)
+            {
+                StringBuilder errorMessages = new StringBuilder();
+                for (int i = 0; i < ex.Errors.Count; i++)
+                {
+                    errorMessages.Append("Index #" + i + "\n" + "Message: " + ex.Errors[i].Message + "\n" + "LineNumber: " + ex.Errors[i].LineNumber + "\n" + "Source: " + ex.Errors[i].Source + "\n" + "Procedure: " + ex.Errors[i].Procedure + "\n");
+                }
+                MessageBox.Show(errorMessages.ToString());
+            }
+        }
+
+        private void textBox3_MouseClick(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show(@"Enter your current windows login in format: domen\login");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("For create working database you have to execute the sql-query SQLQuery_CREATE_DATABASE.sql in  in project catalog");
+        }
     }
 }
