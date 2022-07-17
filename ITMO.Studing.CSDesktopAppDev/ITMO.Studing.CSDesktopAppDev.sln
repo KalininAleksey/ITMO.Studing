@@ -50,6 +50,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CSDesktopAppDe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CSDesktopAppDev.WPF.Lab1Ex2.WpfHelloNav", "ITMO.Studing.CSDesktopAppDev.WPF.Lab1.Ex2.WpfHelloNav\ITMO.Studing.CSDesktopAppDev.WPF.Lab1Ex2.WpfHelloNav.csproj", "{2441B22D-CBCA-44B5-91A1-318E18D50394}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMO.Studing.CSDesktopAppDev.WPF.Lab4Ex1.UserIn1", "TMO.Studing.CSDesktopAppDev.WPF.Lab4Ex1.UserIn1\TMO.Studing.CSDesktopAppDev.WPF.Lab4Ex1.UserIn1.csproj", "{5F9509E4-F2DB-4F56-856E-5BA05CB843ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CSDesktopAppDev.WPF.Lab4Ex2.UserIn2", "ITMO.Studing.CSDesktopAppDev.WPF.Lab4Ex2.UserIn2\ITMO.Studing.CSDesktopAppDev.WPF.Lab4Ex2.UserIn2.csproj", "{F200AC4A-579E-4AC0-8494-CC106CB9EB62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CSDesktopAppDev.WPF.Lab4Ex3.UserIn3", "ITMO.Studing.CSDesktopAppDev.WPF.Lab4Ex3.UserIn3\ITMO.Studing.CSDesktopAppDev.WPF.Lab4Ex3.UserIn3.csproj", "{BCE9AE9C-178B-4E71-B75A-8151464E44FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CSDesktopAppDev.WPF.Lab2Ex1.RoutedEvent_2_1", "ITMO.Studing.CSDesktopAppDev.WPF.Lab2Ex1.RoutedEvent_2_1\ITMO.Studing.CSDesktopAppDev.WPF.Lab2Ex1.RoutedEvent_2_1.csproj", "{A1D1765F-603E-4182-98B7-0042DF3361CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.CSDesktopAppDev.WPF.Lab2Ex2.RoutedEvent_2_2", "ITMO.Studing.CSDesktopAppDev.WPF.Lab2Ex2.RoutedEvent_2_2\ITMO.Studing.CSDesktopAppDev.WPF.Lab2Ex2.RoutedEvent_2_2.csproj", "{9E7448C3-82BD-4EC5-B89C-1506C9103D4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -140,6 +150,26 @@ Global
 		{2441B22D-CBCA-44B5-91A1-318E18D50394}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2441B22D-CBCA-44B5-91A1-318E18D50394}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2441B22D-CBCA-44B5-91A1-318E18D50394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F9509E4-F2DB-4F56-856E-5BA05CB843ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F9509E4-F2DB-4F56-856E-5BA05CB843ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F9509E4-F2DB-4F56-856E-5BA05CB843ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F9509E4-F2DB-4F56-856E-5BA05CB843ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F200AC4A-579E-4AC0-8494-CC106CB9EB62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F200AC4A-579E-4AC0-8494-CC106CB9EB62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F200AC4A-579E-4AC0-8494-CC106CB9EB62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F200AC4A-579E-4AC0-8494-CC106CB9EB62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCE9AE9C-178B-4E71-B75A-8151464E44FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCE9AE9C-178B-4E71-B75A-8151464E44FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCE9AE9C-178B-4E71-B75A-8151464E44FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCE9AE9C-178B-4E71-B75A-8151464E44FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1D1765F-603E-4182-98B7-0042DF3361CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1D1765F-603E-4182-98B7-0042DF3361CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1D1765F-603E-4182-98B7-0042DF3361CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1D1765F-603E-4182-98B7-0042DF3361CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E7448C3-82BD-4EC5-B89C-1506C9103D4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E7448C3-82BD-4EC5-B89C-1506C9103D4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E7448C3-82BD-4EC5-B89C-1506C9103D4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E7448C3-82BD-4EC5-B89C-1506C9103D4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
