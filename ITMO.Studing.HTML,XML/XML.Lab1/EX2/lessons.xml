@@ -1,0 +1,36 @@
+<?xml version = "1.0" encoding ="utf-8"?>
+
+<Timetable>
+	<course>
+		<Name>Технологии программирования</Name>
+		<Teacher>Смольянинов</Teacher>
+		<begindate>28.03.2022</begindate>
+		<enddate>15.04.2022</enddate>
+		<checktype>зачет</checktype>
+	</course>
+	
+	<course>
+		<Name>Введение в базы данных</Name>
+		<Teacher>Ямщиков</Teacher>
+		<begindate>18.04.2022</begindate>
+		<enddate>29.04.2022</enddate>
+		<checktype>зачет</checktype>
+	</course>
+	
+	<course>
+		<Name>Программирование на С#</Name>
+		<Teacher>Смольянинов</Teacher>
+		<begindate>11.05.2022</begindate>
+		<enddate>31.05.2022</enddate>
+		<checktype>зачет</checktype>
+	</course>
+	
+	<course>
+		<Name>Transact SQL</Name>
+		<Teacher>Ямщиков</Teacher>
+		<begindate>2.06.2022</begindate>
+		<enddate>24.06.2022</enddate>
+		<checktype>экзамен</checktype>
+	</course>
+	
+</Timetable>

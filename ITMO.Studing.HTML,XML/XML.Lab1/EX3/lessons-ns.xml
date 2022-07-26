@@ -1,0 +1,76 @@
+<?xml version = "1.0" encoding ="utf-8"?>
+
+<myns:Timetable xmlns:myns="http://www.itmo.ru/xml/lessons">
+	<myns:course id="1">
+		<myns:Name>Технологии программирования</myns:Name>
+		<myns:Teacher>Смольянинов</myns:Teacher>
+		<myns:begindate>28.03.2022</myns:begindate>
+		<myns:enddate>15.04.2022</myns:enddate>
+		<myns:checktype>зачет</myns:checktype>
+		<rns:resourses id="1" xmlns:rns="http://www.itmo.ru/xml/resourses">
+				<rns:book id="1">
+				<rns:Name>Книга 1</rns:Name>
+				<rns:author>Автор 1</rns:author>
+				</rns:book>
+				<rns:book id="2">
+				<rns:Name>Книга 2</rns:Name>
+				<rns:author>Автор 2</rns:author>
+				</rns:book>
+		</rns:resourses>
+	</myns:course>
+	
+	<myns:course id="2">
+		<myns:Name>Введение в базы данных</myns:Name>
+		<myns:Teacher>Ямщиков</myns:Teacher>
+		<myns:begindate>18.04.2022</myns:begindate>
+		<myns:enddate>29.04.2022</myns:enddate>
+		<myns:checktype>зачет</myns:checktype>
+		<rns:resourses id="2" xmlns:rns="http://www.itmo.ru/xml/resourses">
+				<rns:book id="3">
+				<rns:Name>Книга 3</rns:Name>
+				<rns:author>Автор 3</rns:author>
+				</rns:book>
+				<rns:book id="4">
+				<rns:Name>Книга 4</rns:Name>
+				<rns:author>Автор 4</rns:author>
+				</rns:book>
+		</rns:resourses>
+	</myns:course>
+	
+	<myns:course id="3">
+		<myns:Name>Программирование на С#</myns:Name>
+		<myns:Teacher>Смольянинов</myns:Teacher>
+		<myns:begindate>11.05.2022</myns:begindate>
+		<myns:enddate>31.05.2022</myns:enddate>
+		<myns:checktype>зачет</myns:checktype>
+		<rns:resourses id="3" xmlns:rns="http://www.itmo.ru/xml/resourses">
+				<rns:book id="5">
+				<rns:Name>Книга 5</rns:Name>
+				<rns:author>Автор 5</rns:author>
+				</rns:book>
+				<rns:book id="6">
+				<rns:Name>Книга 6</rns:Name>
+				<rns:author>Автор 6</rns:author>
+				</rns:book>
+		</rns:resourses>
+	</myns:course>
+	
+	<myns:course id="4">
+		<myns:Name>Transact SQL</myns:Name>
+		<myns:Teacher>Ямщиков</myns:Teacher>
+		<myns:begindate>2.06.2022</myns:begindate>
+		<myns:enddate>24.06.2022</myns:enddate>
+		<myns:checktype>экзамен</myns:checktype>
+		<rns:resourses id="4" xmlns:rns="http://www.itmo.ru/xml/resourses">
+				<rns:book id="7">
+				<rns:Name>Книга 7</rns:Name>
+				<rns:author>Автор 7</rns:author>
+				</rns:book>
+				<rns:book id="8">
+				<rns:Name>Книга 8</rns:Name>
+				<rns:author>Автор 8</rns:author>
+				</rns:book>
+		</rns:resourses>
+	</myns:course>
+	
+</myns:Timetable>
