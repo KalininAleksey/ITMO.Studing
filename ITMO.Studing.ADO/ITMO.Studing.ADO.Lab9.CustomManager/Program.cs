@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ITMO.Studing.ADO.FinalTask
+namespace ITMO.Studing.ADO.Lab9.CustomManager
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace ITMO.Studing.ADO.FinalTask
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new CustomerViewer());
         }
     }
 }
