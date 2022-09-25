@@ -41,6 +41,8 @@ namespace ITMO.Studing.ADO.FinalTask
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            LoginTextBox.TabIndex = 0;
+            PasswordTextBox.TabIndex = 1;
             PasswordTextBox.PasswordChar= '*';
            
         }

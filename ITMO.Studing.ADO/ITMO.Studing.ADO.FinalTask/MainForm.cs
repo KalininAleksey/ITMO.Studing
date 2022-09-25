@@ -36,7 +36,6 @@ namespace ITMO.Studing.ADO.FinalTask
             button3.Enabled = true;
             tablename = TablesComboBox.SelectedItem.ToString();
             workingtable(tablename,false);
-            dataGridView1.DataSource = shipsDBDataSet1.Tables[tablename];
             
         }
 
