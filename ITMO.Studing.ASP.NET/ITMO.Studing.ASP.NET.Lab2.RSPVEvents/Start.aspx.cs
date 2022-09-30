@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ITMO.Studing.ASP.NET.Lab1.RSVP
+namespace ITMO.Studing.ASP.NET.Lab2.RSVPEvents
 {
-    public partial class Reg : System.Web.UI.Page
+    public partial class Start : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
