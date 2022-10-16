@@ -1,0 +1,33 @@
+﻿@model ITMO.Studing.ASP.NET.FinalTask.Models.StudentPerfomance
+
+@{
+    ViewBag.Title = "OutputStudentPerfomanceData";
+    Layout = "~/Views/_BasicLayout.cshtml";
+}
+
+<div>
+    <h3>Таблица результатов студентов по дисциплинам</h3>
+    <table>
+        <tr>
+            <td><p>N результата</p></td>
+            <td><p>N студента </p></td>
+            <td><p>Наименование дисциплины</p></td>
+            <td><p>Дата и время тестирования</p></td>
+            <td><p>Оценка</p></td>
+        </tr>
+        @foreach (var st in ViewBag.Perf)
+        {
+            <tr>
+                <td><p>@st.StudentPerfomanceId</p></td>
+                <td><p>@st.studentId</p></td>
+                <td><p>@st.examName</p></td>
+                <td><p>@st.TestDate</p></td>
+                <td><p>@st.score</p></td>
+            </tr>
+        }
+    </table>
+
+    <p>
+        @Html.ActionLink("На главную", "Index")
+    </p>
+</div>

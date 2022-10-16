@@ -46,13 +46,13 @@ namespace ITMO.Studing.ADO.Lab9.CustomManager
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonDel = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.CustomerradioButton = new System.Windows.Forms.RadioButton();
             this.OrderradioButton = new System.Windows.Forms.RadioButton();
+            this.CustomerradioButton = new System.Windows.Forms.RadioButton();
             this.labelID = new System.Windows.Forms.Label();
             this.textBoxCustomer = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.GridView = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             this.SuspendLayout();
             // 
             // customerList
@@ -117,6 +117,7 @@ namespace ITMO.Studing.ADO.Lab9.CustomManager
             this.textBoxage.Name = "textBoxage";
             this.textBoxage.Size = new System.Drawing.Size(114, 20);
             this.textBoxage.TabIndex = 2;
+            this.textBoxage.TextChanged += new System.EventHandler(this.textBoxage_TextChanged);
             // 
             // label3
             // 
@@ -153,6 +154,7 @@ namespace ITMO.Studing.ADO.Lab9.CustomManager
             this.buttonFile.TabIndex = 4;
             this.buttonFile.Text = "Выберите файл...";
             this.buttonFile.UseVisualStyleBackColor = true;
+            this.buttonFile.Click += new System.EventHandler(this.buttonFile_Click);
             // 
             // buttonAdd
             // 
@@ -162,6 +164,7 @@ namespace ITMO.Studing.ADO.Lab9.CustomManager
             this.buttonAdd.TabIndex = 4;
             this.buttonAdd.Text = "Добавить данные";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonOut
             // 
@@ -171,6 +174,7 @@ namespace ITMO.Studing.ADO.Lab9.CustomManager
             this.buttonOut.TabIndex = 4;
             this.buttonOut.Text = "Показать данные";
             this.buttonOut.UseVisualStyleBackColor = true;
+            this.buttonOut.Click += new System.EventHandler(this.buttonOut_Click);
             // 
             // buttonEdit
             // 
@@ -201,17 +205,6 @@ namespace ITMO.Studing.ADO.Lab9.CustomManager
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Выбор данных";
             // 
-            // CustomerradioButton
-            // 
-            this.CustomerradioButton.AutoSize = true;
-            this.CustomerradioButton.Location = new System.Drawing.Point(16, 19);
-            this.CustomerradioButton.Name = "CustomerradioButton";
-            this.CustomerradioButton.Size = new System.Drawing.Size(74, 17);
-            this.CustomerradioButton.TabIndex = 0;
-            this.CustomerradioButton.TabStop = true;
-            this.CustomerradioButton.Text = "Customers";
-            this.CustomerradioButton.UseVisualStyleBackColor = true;
-            // 
             // OrderradioButton
             // 
             this.OrderradioButton.AutoSize = true;
@@ -222,6 +215,17 @@ namespace ITMO.Studing.ADO.Lab9.CustomManager
             this.OrderradioButton.TabStop = true;
             this.OrderradioButton.Text = "Orders";
             this.OrderradioButton.UseVisualStyleBackColor = true;
+            // 
+            // CustomerradioButton
+            // 
+            this.CustomerradioButton.AutoSize = true;
+            this.CustomerradioButton.Location = new System.Drawing.Point(16, 19);
+            this.CustomerradioButton.Name = "CustomerradioButton";
+            this.CustomerradioButton.Size = new System.Drawing.Size(74, 17);
+            this.CustomerradioButton.TabIndex = 0;
+            this.CustomerradioButton.TabStop = true;
+            this.CustomerradioButton.Text = "Customers";
+            this.CustomerradioButton.UseVisualStyleBackColor = true;
             // 
             // labelID
             // 
@@ -239,21 +243,21 @@ namespace ITMO.Studing.ADO.Lab9.CustomManager
             this.textBoxCustomer.Size = new System.Drawing.Size(346, 20);
             this.textBoxCustomer.TabIndex = 2;
             // 
-            // dataGridView1
+            // GridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 159);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(800, 291);
-            this.dataGridView1.TabIndex = 6;
+            this.GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.GridView.Location = new System.Drawing.Point(0, 159);
+            this.GridView.Name = "GridView";
+            this.GridView.Size = new System.Drawing.Size(800, 291);
+            this.GridView.TabIndex = 6;
             // 
             // CustomerViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.GridView);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonOut);
             this.Controls.Add(this.buttonAdd);
@@ -277,7 +281,7 @@ namespace ITMO.Studing.ADO.Lab9.CustomManager
             this.Text = "Customer Viewer";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,7 +310,7 @@ namespace ITMO.Studing.ADO.Lab9.CustomManager
         private System.Windows.Forms.RadioButton CustomerradioButton;
         private System.Windows.Forms.Label labelID;
         private System.Windows.Forms.TextBox textBoxCustomer;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView GridView;
     }
 }
 

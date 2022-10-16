@@ -1,0 +1,32 @@
+﻿@model ITMO.Studing.ASP.NET.FinalTask.Student
+
+@{
+    ViewBag.Title = "Ввод данных о студентах";
+    Layout = "~/Views/_BasicLayout.cshtml";
+}
+
+<h3>Введите данные студента</h3>
+<div>
+    <form method="post">
+        <table>
+            <tr>
+                <td><p>Введите имя:</p></td>
+                <td>
+                    @Html.TextBoxFor(x => x.FirstName)
+                            </td>
+            </tr>
+            <tr>
+                <td><p>Введите фамилию:</p></td>
+                <td>@Html.TextBoxFor(x => x.LastName)</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Отправить" />
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+

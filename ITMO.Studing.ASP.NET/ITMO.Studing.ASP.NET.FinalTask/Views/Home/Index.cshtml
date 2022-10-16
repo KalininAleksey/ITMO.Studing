@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Главная";
+    Layout = "~/Views/_BasicLayout.cshtml";
+}
+
+<div>
+    <p>
+        @Html.ActionLink("Ввод данных о студентах", "InputStudentData")
+    </p>
+    <p>
+        @Html.ActionLink("Ввод данных об успеваемости по дисциплинам", "InputStudentPerfomanceData")
+    </p>
+    <p>
+        @Html.ActionLink("Показать студентов и сумммы баллов", "OutputStudentData")
+    </p>
+    <p>
+        @Html.ActionLink("Показать данные об успеваемости по дисциплинам", "OutputStudentPerfomanceData")
+    </p>
+</div>
+

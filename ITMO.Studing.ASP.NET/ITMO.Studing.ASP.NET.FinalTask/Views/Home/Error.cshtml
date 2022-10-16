@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Error";
+    Layout = "~/Views/_BasicLayout.cshtml";
+}
+
+<div>
+    <p>Ошибка: @ViewBag.err</p>
+    <p>
+        @Html.ActionLink("На главную", "Index")
+    </p>
+</div>
+

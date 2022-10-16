@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.ASP.NET.MVC.La
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.ASP.NET.MVC.Lab4.WebMVCR1", "ITMO.Studing.ASP.NET.MVC.Lab4.WebMVCR1\ITMO.Studing.ASP.NET.MVC.Lab4.WebMVCR1.csproj", "{141AD48C-C127-4C91-9337-4BCFE949FC08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Studing.ASP.NET.FinalTask", "ITMO.Studing.ASP.NET.FinalTask\ITMO.Studing.ASP.NET.FinalTask.csproj", "{CD250571-FEA2-4EE7-AEAB-5B51A8C5BC78}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{141AD48C-C127-4C91-9337-4BCFE949FC08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{141AD48C-C127-4C91-9337-4BCFE949FC08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{141AD48C-C127-4C91-9337-4BCFE949FC08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD250571-FEA2-4EE7-AEAB-5B51A8C5BC78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD250571-FEA2-4EE7-AEAB-5B51A8C5BC78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD250571-FEA2-4EE7-AEAB-5B51A8C5BC78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD250571-FEA2-4EE7-AEAB-5B51A8C5BC78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

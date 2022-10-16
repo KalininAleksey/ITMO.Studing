@@ -1,0 +1,20 @@
+﻿@model ITMO.Studing.ASP.NET.FinalTask.Student
+
+@{
+    ViewBag.Title = "OutputStudentData";
+    Layout = "~/Views/_BasicLayout.cshtml";
+}
+
+<div>
+    <p>@Html.ActionLink("Просмотр 5 лучших студентов", "OutputStudentDataTop5d") @Html.ActionLink("Просмотр 5 худших студентов", "OutputStudentDataTop5a")</p>
+    <h3>Список студентов и сумм баллов</h3>
+    <ul>
+        @foreach (var st in ViewBag.stud)
+        {             <li>@st.ToString() @st.ToStrScores()</li>
+        }
+    </ul>
+    <p>
+        @Html.ActionLink("На главную", "Index")
+    </p>
+</div>
+

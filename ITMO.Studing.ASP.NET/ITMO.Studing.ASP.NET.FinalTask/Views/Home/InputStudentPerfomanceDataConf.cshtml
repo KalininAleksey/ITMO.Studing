@@ -1,0 +1,15 @@
+﻿@model ITMO.Studing.ASP.NET.FinalTask.Models.StudentPerfomance
+
+@{
+    ViewBag.Title = "InputStudentPerfomanceDataConf";
+    Layout = "~/Views/_BasicLayout.cshtml";
+}
+
+<div>
+    <p>Внесены следующие данные об успеваемости студента: </p>
+    <p>@ViewBag.st @Model.ToString()</p>
+    <p>
+        @Html.ActionLink("На главную", "Index")
+    </p>
+</div>
+

@@ -1,0 +1,13 @@
+﻿@model ITMO.Studing.ASP.NET.FinalTask.Student
+
+@{
+    ViewBag.Title = "InputStudentDataConf";
+    Layout = "~/Views/_BasicLayout.cshtml";
+}
+
+<div>
+    <h2>Внесены данные по студенту c номером @Model.ToString()</h2>
+    <p>
+        @Html.ActionLink("На главную", "Index")
+    </p>
+</div>

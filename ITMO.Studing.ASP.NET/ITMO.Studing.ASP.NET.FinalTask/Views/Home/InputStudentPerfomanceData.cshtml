@@ -1,0 +1,35 @@
+﻿@model ITMO.Studing.ASP.NET.FinalTask.Models.StudentPerfomance
+
+@{
+    ViewBag.Title = "InputStudentPerfomanceData";
+    Layout = "~/Views/_BasicLayout.cshtml";
+}
+
+<h3>Введите оценку успеваемости студента по дисциплине</h3>
+<div>
+    <form method="post">
+        <table>
+            <tr>
+                <td><p>Выберите номер, имя и фамилию студента</p></td>
+                <td>
+                    @Html.DropDownListFor(x => x.studentId, (IEnumerable<SelectListItem>)ViewData["allstud"], "Выберите студента")
+                </td>
+            </tr>
+            <tr>
+                <td><p>Введите дисциплину:</p></td>
+                <td>@Html.TextBoxFor(x => x.examName)</td>
+            </tr>
+            <tr>
+                <td><p>Введите оценку:</p></td>
+                <td>@Html.TextBoxFor(x => x.score)</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Отправить" />
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
