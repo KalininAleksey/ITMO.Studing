@@ -1,0 +1,54 @@
+
+dasd asda has card N1 with access level:student-access
+
+fsfsd qweqw has card N2 with access level:student-access
+
+fsdfds ssdfsd has card N3 with access level:teacher-access
+
+sdfsd daasf has card N1 with access level:student-access
+
+ddf fsdfs has card N1 with access level:teacher-access
+
+hjhjj ghhh has card N1 with access level:student-access
+
+asdas ddasd has card N1 with access level:student-access
+
+asda dasd has card N1 with access level:student-access
+
+dddd ass has card N1 with access level:student-access
+
+asfas sdasd has card N1 with access level:student-access
+
+asda adasd has card N2 with access level:teacher-access
+
+gdf dasasd has card N3 with access level:student-access
+
+ffef sadasd has card N1 with access level:student-access
+
+eeeee wwwww has card N2 with access level:teacher-access
+
+fdsd qeqwewqe has card N3 with access level:student-access
+
+erer dfdf has card N1 with access level:student-access
+
+fsdgfdsg werwer has card N2 with access level:teacher-access
+
+jjjjj werw has card N3 with access level:teacher-access
+
+aaa dasdas has card N1 with access level:student-access and his average_score 2
+
+
+cccc sdfsdf has card N2 with access level:teacher-access and his work_time is 33333
+
+
+qewqe asda has card N1 with access level:student-access and average_score 3
+
+
+ddddd eeeee has card N2 with access level:teacher-access and work_time is 3432
+
+
+xxx zzzz has card N1 with access level:student-access and average_score 3
+
+
+ssss aaaa has card N2 with access level:teacher-access and work_time is 34523
+
